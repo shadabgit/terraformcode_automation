@@ -11,14 +11,13 @@ terraform {
 
 provider "aws" {
   profile = "default"
-  region  = "us-east-2"
+  region  = "ap-south-1"
 }
 
-resource "aws_instance" "app_server" {
-  ami           = "ami-064ff912f78e3e561"
+resource "aws_instance" "app_server" { 
+  ami           = "ami-01a00762f46d584a1"
   instance_type = "t3.micro"
-
   tags = {
-    Name = "ExampleAppServerInstance"
+    Name = "myUbuntuServer"
   }
 }
